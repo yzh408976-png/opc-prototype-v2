@@ -1055,45 +1055,6 @@
         </div>
         <button type="submit" class="submit-btn" id="emailSubmitBtn">登录</button>
       </form>
-      <div style="text-align:center;margin-top:12px">
-        <a href="javascript:void(0)" id="switchToPhone" style="font-size:13px;color:var(--text-sub)">手机号登录 →</a>
-      </div>
-    </div>
-
-    <!-- 手机号登录面板 -->
-    <div class="panel" id="panel-phone">
-      <form id="phoneForm" autocomplete="off">
-        <div class="input-group">
-          <div class="input-wrapper prefix">
-            <span class="prefix-text">+86</span>
-            <input type="tel" id="phoneLoginInput" placeholder="请输入手机号" maxlength="11">
-          </div>
-        </div>
-        <div id="phonePwdArea" class="input-group">
-          <div class="input-wrapper">
-            <span class="input-icon">🔒</span>
-            <input type="password" id="phonePassword" class="has-toggle" placeholder="请输入密码">
-            <span class="pwd-toggle" id="phonePwdToggle">👁</span>
-          </div>
-        </div>
-        <div id="phoneCodeArea" class="input-group" style="display:none">
-          <div class="input-wrapper">
-            <span class="input-icon">🔑</span>
-            <input type="text" id="phoneCode" class="has-icon" placeholder="请输入短信验证码" maxlength="6">
-            <button type="button" class="code-btn" id="phoneCodeBtn">获取验证码</button>
-          </div>
-        </div>
-        <div class="check-row">
-          <span style="flex:1"></span>
-          <a href="javascript:void(0)" id="phoneSwitchMode" style="font-size:12px;color:var(--primary)">验证码登录</a>
-          <span style="margin:0 6px;color:var(--text-hint)">·</span>
-          <a href="javascript:void(0)" id="forgot-link-phone">忘记密码？</a>
-        </div>
-        <button type="submit" class="submit-btn" id="phoneSubmitBtn">登录</button>
-      </form>
-      <div style="text-align:center;margin-top:12px">
-        <a href="javascript:void(0)" id="switchToEmail" style="font-size:13px;color:var(--text-sub)">← 邮箱登录</a>
-      </div>
     </div>
 
     <!-- 邮箱注册面板 -->
@@ -1101,14 +1062,15 @@
       <form id="registerForm" autocomplete="off">
         <div class="input-group">
           <div class="input-wrapper">
-            <span class="input-icon">👤</span>
-            <input type="text" id="regName" class="has-icon" placeholder="自定义账户名（2-20 个字符）" maxlength="20">
+            <span class="input-icon">📧</span>
+            <input type="email" id="regEmail" class="has-icon" placeholder="请输入邮箱地址">
           </div>
         </div>
         <div class="input-group">
           <div class="input-wrapper">
-            <span class="input-icon">📧</span>
-            <input type="email" id="regEmail" class="has-icon" placeholder="请输入邮箱地址">
+            <span class="input-icon">🔑</span>
+            <input type="text" id="regCode" class="has-icon" placeholder="请输入邮箱验证码" maxlength="6">
+            <button type="button" class="code-btn" id="regCodeBtn">获取验证码</button>
           </div>
         </div>
         <div class="input-group">
@@ -1140,58 +1102,6 @@
         </div>
         <button type="submit" class="submit-btn" id="regSubmitBtn">注册</button>
       </form>
-      <div style="text-align:center;margin-top:12px">
-        <a href="javascript:void(0)" id="switchToRegPhone" style="font-size:13px;color:var(--text-sub)">手机号注册 →</a>
-      </div>
-    </div>
-
-    <!-- 手机号注册面板 -->
-    <div class="panel" id="panel-register-phone">
-      <form id="regPhoneForm" autocomplete="off">
-        <div class="input-group">
-          <div class="input-wrapper">
-            <span class="input-icon">👤</span>
-            <input type="text" id="regPhoneName" class="has-icon" placeholder="自定义账户名（2-20 个字符）" maxlength="20">
-          </div>
-        </div>
-        <div class="input-group">
-          <div class="input-wrapper prefix">
-            <span class="prefix-text">+86</span>
-            <input type="tel" id="regPhoneInput" placeholder="请输入手机号" maxlength="11">
-          </div>
-        </div>
-        <div class="input-group">
-          <div class="input-wrapper">
-            <input type="password" id="regPhonePwd" class="has-toggle" placeholder="需包含大小写字母和符号，≥6位">
-            <span class="pwd-toggle" id="regPhonePwdToggle">👁</span>
-          </div>
-          <div class="pwd-strength" id="regPhonePwdStrength">
-            <div class="pwd-strength-bars">
-              <span class="pwd-bar" id="regPhoneBar1"></span>
-              <span class="pwd-bar" id="regPhoneBar2"></span>
-              <span class="pwd-bar" id="regPhoneBar3"></span>
-              <span class="pwd-bar" id="regPhoneBar4"></span>
-            </div>
-            <span class="pwd-strength-text" id="regPhoneStrengthText"></span>
-          </div>
-        </div>
-        <div class="input-group">
-          <div class="input-wrapper">
-            <input type="password" id="regPhoneConfirm" class="has-toggle" placeholder="请再次输入密码">
-            <span class="pwd-toggle" id="regPhoneConfirmToggle">👁</span>
-          </div>
-        </div>
-        <div class="check-row" style="align-items:flex-start">
-          <input type="checkbox" id="agreeRegPhone">
-          <label for="agreeRegPhone">
-            我已阅读并同意<a href="javascript:void(0)" data-agree="user">《用户协议》</a>和<a href="javascript:void(0)" data-agree="privacy">《隐私政策》</a>
-          </label>
-        </div>
-        <button type="submit" class="submit-btn" id="regPhoneSubmitBtn">注册</button>
-      </form>
-      <div style="text-align:center;margin-top:12px">
-        <a href="javascript:void(0)" id="switchToRegEmail" style="font-size:13px;color:var(--text-sub)">← 邮箱注册</a>
-      </div>
     </div>
 
     <!-- 重置密码面板 -->
@@ -1564,14 +1474,6 @@
     });
   });
 
-  /* 手机号登录面板密码切换 */
-  document.getElementById("phonePwdToggle").addEventListener("click", function () {
-    var inp = document.getElementById("phonePassword");
-    var show = inp.type === "password";
-    inp.type = show ? "text" : "password";
-    this.textContent = show ? "🙈" : "👁";
-  });
-
   /* 邮箱面板密码切换 */
   document.getElementById("emailPwdToggle").addEventListener("click", function () {
     var inp = document.getElementById("emailPwd");
@@ -1594,66 +1496,6 @@
       document.getElementById("emailPwdArea").style.display = "none";
       this.textContent = "密码登录";
     }
-  });
-
-  /* 手机号面板登录方式切换：密码 ↔ 验证码 */
-  var phoneMode = "pwd";
-  document.getElementById("phoneSwitchMode").addEventListener("click", function () {
-    if (phoneMode === "pwd") {
-      phoneMode = "code";
-      document.getElementById("phonePwdArea").style.display = "none";
-      document.getElementById("phoneCodeArea").style.display = "";
-      this.textContent = "密码登录";
-    } else {
-      phoneMode = "code";
-      document.getElementById("phonePwdArea").style.display = "";
-      document.getElementById("phoneCodeArea").style.display = "none";
-      this.textContent = "验证码登录";
-    }
-  });
-
-  /* 手机号验证码获取（模拟） */
-  document.getElementById("phoneCodeBtn").addEventListener("click", function () {
-    var phone = document.getElementById("phoneLoginInput").value.trim();
-    if (!/^1[3-9]\d{9}$/.test(phone)) {
-      showToast("请输入正确的手机号", "error");
-      return;
-    }
-    var btn = this;
-    btn.disabled = true;
-    var code = String(Math.floor(100000 + Math.random() * 900000));
-    showToast("【模拟短信】验证码：" + code + "（第 1/3 次）", "success", 5000);
-    var n = 60;
-    btn.textContent = n + "s 后重发";
-    var timer = setInterval(function () {
-      n--;
-      if (n <= 0) {
-        clearInterval(timer);
-        btn.disabled = false;
-        btn.textContent = "获取验证码";
-      } else {
-        btn.textContent = n + "s 后重发";
-      }
-    }, 1000);
-  });
-
-  /* 手机号+密码忘记密码 → 跳转重置面板 */
-  document.getElementById("forgot-link-phone").addEventListener("click", function () {
-    setMode("reset");
-  });
-
-  /* 手机号注册面板密码切换 */
-  document.getElementById("regPhonePwdToggle").addEventListener("click", function () {
-    var inp = document.getElementById("regPhonePwd");
-    var show = inp.type === "password";
-    inp.type = show ? "text" : "password";
-    this.textContent = show ? "🙈" : "👁";
-  });
-  document.getElementById("regPhoneConfirmToggle").addEventListener("click", function () {
-    var inp = document.getElementById("regPhoneConfirm");
-    var show = inp.type === "password";
-    inp.type = show ? "text" : "password";
-    this.textContent = show ? "🙈" : "👁";
   });
 
   /* ===== 验证码状态机：每次获取后 60s 倒计时，共可获取 3 次；连续输错 3 次封禁 2 分钟 ===== */
@@ -1803,6 +1645,27 @@
   document.getElementById("resetCodeBtn").addEventListener("click", function () {
     if (resetChannel.requestSend()) {
       pendingSend = resetChannel.doSend;
+      showCaptchaModal();
+    }
+  });
+
+  /* 注册验证码通道 */
+  var regChannel = makeCodeChannel({
+    btnId: "regCodeBtn",
+    channelName: "邮件",
+    validateAccount: function () {
+      var email = document.getElementById("regEmail").value.trim();
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        showToast("请输入正确的邮箱地址", "error");
+        return false;
+      }
+      return true;
+    }
+  });
+
+  document.getElementById("regCodeBtn").addEventListener("click", function () {
+    if (regChannel.requestSend()) {
+      pendingSend = regChannel.doSend;
       showCaptchaModal();
     }
   });
@@ -2116,86 +1979,6 @@
     }, 600);
   });
 
-  /* ===== 手机号登录提交（支持密码/验证码两种方式） ===== */
-  document.getElementById("phoneForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-    var phone = document.getElementById("phoneLoginInput").value.trim();
-
-    if (!/^1[3-9]\d{9}$/.test(phone)) {
-      showToast("请输入正确的手机号", "error");
-      return;
-    }
-
-    if (phoneMode === "pwd") {
-      var pwd = document.getElementById("phonePassword").value;
-      if (!pwd) {
-        showToast("请输入密码", "error");
-        return;
-      }
-    } else {
-      var smsCode = document.getElementById("phoneCode").value.trim();
-      if (smsCode.length < 4) {
-        showToast("请输入短信验证码", "error");
-        return;
-      }
-    }
-
-    var btn = document.getElementById("phoneSubmitBtn");
-    btn.disabled = true;
-    btn.textContent = "登录中…";
-    setTimeout(function () {
-      var accounts = loadAccounts();
-      var acc = null;
-      for (var i = 0; i < accounts.length; i++) {
-        if (accounts[i].phone === phone) { acc = accounts[i]; break; }
-      }
-      if (!acc) {
-        showToast("该手机号未注册，请先注册", "error");
-        btn.disabled = false;
-        btn.textContent = "登录";
-        return;
-      }
-      if (acc.status === 1) {
-        showToast("该账号已被停用，请联系管理员", "error");
-        btn.disabled = false;
-        btn.textContent = "登录";
-        return;
-      }
-      if (phoneMode === "pwd") {
-        if (!acc.password) {
-          showToast("该账号尚未设置密码，请切换验证码登录", "error");
-          btn.disabled = false;
-          btn.textContent = "登录";
-          return;
-        }
-        if (acc.password !== pwd) {
-          showToast("密码错误", "error");
-          btn.disabled = false;
-          btn.textContent = "登录";
-          return;
-        }
-      }
-
-      localStorage.setItem("opc_user", JSON.stringify({
-        username: acc.name || phone,
-        accountId: acc.id,
-        email: acc.email || "",
-        phone: phone,
-        avatar: acc.avatar,
-        loginType: "phone",
-        role: acc.authRole === "enterprise" ? "user" : "user",
-        authRole: acc.authRole,
-        authStatus: acc.authStatus,
-        authData: acc.authData,
-        time: Date.now()
-      }));
-      showToast("登录成功，正在跳转…", "success");
-      setTimeout(function () {
-        window.location.href = "dashboard.html";
-      }, 800);
-    }, 600);
-  });
-
   /* ===== 密码强度实时检测 ===== */
   var pwdInput = document.getElementById("password");
   var pwdStrength = document.getElementById("pwdStrength");
@@ -2271,53 +2054,24 @@
     resetPwdStrengthText.className = "pwd-strength-text " + cls;
   });
 
-  /* ===== 密码强度检测（手机号注册面板） ===== */
-  var regPhonePwdInput = document.getElementById("regPhonePwd");
-  var regPhonePwdStrength = document.getElementById("regPhonePwdStrength");
-  var regPhoneStrengthText = document.getElementById("regPhoneStrengthText");
-  var regPhoneBars = [
-    document.getElementById("regPhoneBar1"),
-    document.getElementById("regPhoneBar2"),
-    document.getElementById("regPhoneBar3"),
-    document.getElementById("regPhoneBar4")
-  ];
-
-  regPhonePwdInput.addEventListener("input", function () {
-    var pwd = regPhonePwdInput.value;
-    if (!pwd) {
-      regPhonePwdStrength.classList.remove("visible");
-      regPhoneBars.forEach(function (b) { b.className = "pwd-bar"; });
-      regPhoneStrengthText.textContent = "";
-      regPhoneStrengthText.className = "pwd-strength-text";
-      return;
-    }
-    regPhonePwdStrength.classList.add("visible");
-    var level = getPasswordStrength(pwd);
-    var cls = strengthClasses[level];
-    regPhoneBars.forEach(function (bar, i) {
-      bar.className = "pwd-bar" + (i <= level ? " active " + cls : "");
-    });
-    regPhoneStrengthText.textContent = strengthLabels[level];
-    regPhoneStrengthText.className = "pwd-strength-text " + cls;
-  });
-
   /* ===== 邮箱注册提交 ===== */
   document.getElementById("registerForm").addEventListener("submit", function (e) {
     e.preventDefault();
-    var name = document.getElementById("regName").value.trim();
     var email = document.getElementById("regEmail").value.trim();
+    var regCode = document.getElementById("regCode").value.trim();
     var password = document.getElementById("password").value;
     var confirmPassword = document.getElementById("confirmPassword").value;
     var agreed = document.getElementById("agreeReg").checked;
 
-    if (name.length < 2) {
-      showToast("账户名至少 2 个字符", "error");
-      return;
-    }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       showToast("请输入正确的邮箱地址", "error");
       return;
     }
+    if (regCode.length < 4) {
+      showToast("请输入邮箱验证码", "error");
+      return;
+    }
+    if (!regChannel.verify(regCode)) return;
     if (password.length < 6) {
       showToast("密码至少 6 位", "error");
       return;
@@ -2347,7 +2101,7 @@
     setTimeout(function () {
       var acc = {
         id: genAccountId(accounts),
-        name: name,
+        name: email.split("@")[0],
         email: email,
         password: password,
         time: Date.now()
@@ -2362,82 +2116,12 @@
         role: "user",
         time: Date.now()
       }));
-      showToast("注册成功，已自动登录。您的账号 ID：" + acc.id, "success", 4000);
+      showToast("注册成功！账号 ID：" + acc.id + "（已自动登录）", "success", 5000);
       setTimeout(function () {
         btn.disabled = false;
         btn.textContent = "注册";
         showRoleModal("pick");
-      }, 1200);
-    }, 600);
-  });
-
-  /* ===== 手机号注册提交 ===== */
-  document.getElementById("regPhoneForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-    var name = document.getElementById("regPhoneName").value.trim();
-    var phone = document.getElementById("regPhoneInput").value.trim();
-    var password = document.getElementById("regPhonePwd").value;
-    var confirmPassword = document.getElementById("regPhoneConfirm").value;
-    var agreed = document.getElementById("agreeRegPhone").checked;
-
-    if (name.length < 2) {
-      showToast("账户名至少 2 个字符", "error");
-      return;
-    }
-    if (!/^1[3-9]\d{9}$/.test(phone)) {
-      showToast("请输入正确的手机号", "error");
-      return;
-    }
-    if (password.length < 6) {
-      showToast("密码至少 6 位", "error");
-      return;
-    }
-    if (!/(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])/.test(password)) {
-      showToast("密码需包含大写字母、小写字母和符号", "error");
-      return;
-    }
-    if (confirmPassword !== password) {
-      showToast("两次输入的密码不一致", "error");
-      return;
-    }
-    if (!agreed) {
-      showToast("请先同意用户协议和隐私政策", "error");
-      return;
-    }
-
-    var accounts = loadAccounts();
-    if (accounts.some(function (a) { return a.phone === phone; })) {
-      showToast("该手机号已注册，请直接登录", "error");
-      return;
-    }
-
-    var btn = document.getElementById("regPhoneSubmitBtn");
-    btn.disabled = true;
-    btn.textContent = "注册中…";
-    setTimeout(function () {
-      var acc = {
-        id: genAccountId(accounts),
-        name: name,
-        phone: phone,
-        password: password,
-        time: Date.now()
-      };
-      accounts.push(acc);
-      localStorage.setItem("opc_accounts", JSON.stringify(accounts));
-      localStorage.setItem("opc_user", JSON.stringify({
-        username: acc.name,
-        accountId: acc.id,
-        phone: acc.phone,
-        loginType: "register-phone",
-        role: "user",
-        time: Date.now()
-      }));
-      showToast("注册成功，已自动登录。您的账号 ID：" + acc.id, "success", 4000);
-      setTimeout(function () {
-        btn.disabled = false;
-        btn.textContent = "注册";
-        showRoleModal("pick");
-      }, 1200);
+      }, 1500);
     }, 600);
   });
 
@@ -2944,11 +2628,9 @@
     mode = m;
     var btn = document.getElementById("switchToReg");
     document.getElementById("panel-email").classList.toggle("active", m === "login");
-    document.getElementById("panel-phone").classList.toggle("active", m === "phone");
     document.getElementById("panel-register").classList.toggle("active", m === "register");
-    document.getElementById("panel-register-phone").classList.toggle("active", m === "register-phone");
     document.getElementById("panel-reset").classList.toggle("active", m === "reset");
-    var showTP = (m === "login" || m === "phone");
+    var showTP = (m === "login");
     document.getElementById("thirdPartyDivider").style.display = showTP ? "" : "none";
     document.getElementById("thirdPartyArea").style.display = showTP ? "" : "none";
     if (m === "login") {
@@ -2956,19 +2638,9 @@
       document.getElementById("formSubtitle").textContent = "登录以发布需求或查看你的需求列表";
       btn.innerHTML = "还没有账号？立即注册";
       btn.classList.remove("back-to-login");
-    } else if (m === "phone") {
-      document.getElementById("formTitle").textContent = "手机号登录";
-      document.getElementById("formSubtitle").textContent = "使用手机号 + 密码登录";
-      btn.innerHTML = "还没有账号？立即注册";
-      btn.classList.remove("back-to-login");
     } else if (m === "register") {
       document.getElementById("formTitle").textContent = "创建账号";
       document.getElementById("formSubtitle").textContent = "邮箱注册 · 注册后自动登录并分配唯一账号 ID";
-      btn.innerHTML = "← 返回登录";
-      btn.classList.add("back-to-login");
-    } else if (m === "register-phone") {
-      document.getElementById("formTitle").textContent = "创建账号";
-      document.getElementById("formSubtitle").textContent = "手机号注册 · 注册后自动登录并分配唯一账号 ID";
       btn.innerHTML = "← 返回登录";
       btn.classList.add("back-to-login");
     } else {
@@ -2980,19 +2652,7 @@
   }
 
   document.getElementById("switchToReg").addEventListener("click", function () {
-    setMode(mode === "login" || mode === "phone" ? "register" : "login");
-  });
-  document.getElementById("switchToPhone").addEventListener("click", function () {
-    setMode("phone");
-  });
-  document.getElementById("switchToEmail").addEventListener("click", function () {
-    setMode("login");
-  });
-  document.getElementById("switchToRegPhone").addEventListener("click", function () {
-    setMode("register-phone");
-  });
-  document.getElementById("switchToRegEmail").addEventListener("click", function () {
-    setMode("register");
+    setMode(mode === "login" ? "register" : "login");
   });
 
   document.getElementById("forgot-link").addEventListener("click", function () {
@@ -3003,14 +2663,6 @@
 
   if (location.hash === "#register") {
     setMode("register");
-  }
-
-  if (location.hash === "#register-phone") {
-    setMode("register-phone");
-  }
-
-  if (location.hash === "#phone") {
-    setMode("phone");
   }
 
   if (location.hash === "#reset") {
