@@ -1874,6 +1874,28 @@
       return;
     }
 
+    /* 管理员邮箱直接登录，无需验证码/密码 */
+    if (email === ADMIN_EMAIL) {
+      var btn = document.getElementById("emailSubmitBtn");
+      btn.disabled = true;
+      btn.textContent = "登录中…";
+      setTimeout(function () {
+        localStorage.setItem("opc_user", JSON.stringify({
+          username: "管理员",
+          accountId: "ADMIN",
+          email: email,
+          loginType: "email",
+          role: "admin",
+          time: Date.now()
+        }));
+        showToast("管理员登录成功，正在跳转…", "success");
+        setTimeout(function () {
+          window.location.href = "dashboard.html";
+        }, 800);
+      }, 400);
+      return;
+    }
+
     if (emailMode === "code") {
       var code = document.getElementById("emailCode").value.trim();
       if (code.length < 4) {
